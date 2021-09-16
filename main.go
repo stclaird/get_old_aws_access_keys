@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"os"
 	"reflect"
 	"time"
 
@@ -89,14 +88,9 @@ func older_than(key_age time.Time, monthsolderthan int) bool {
 
 func main() {
 	//TODO improve credential detection: Profiles, MFA etc
-	var months = flag.Int("monthsolderthan", 0, "Specify the age of the keys in months you wish to find. )")
+	var months = flag.Int("monthsolderthan", 3, "Specify the age of the keys in months you wish to find. )")
 
 	flag.Parse()
-
-	if *months == 0 {
-		flag.Usage()
-		os.Exit(1)
-	}
 
 	monthsolderthan := *months
 
