@@ -1,4 +1,4 @@
-module get_iam_keys
+module getawskeys
 
 go 1.16
 
